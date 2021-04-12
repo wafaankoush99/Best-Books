@@ -1,0 +1,108 @@
+@media (min-width: 480px) { 
+
+
+    .formDiv{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+    }
+    .container {
+        display: grid;
+        grid-template-rows: 80px minmax(calc(105vh - 170px) , 1fr) 60px;
+        /* gap: 10px; */
+    }
+
+
+    .underHeader {
+        background-color: #4a4a4a;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    
+
+
+    #enter{
+        /* padding: 10px; */
+        margin: 10px 0;
+        height: 50px;
+        line-height: 50px;
+        /* width: 550px; */
+
+    }
+
+    #title, #author{
+        width: 10px;
+    }
+    #title , #author {
+        background-color: #d8d8d8;
+        color: black;
+        margin: 10px 0;
+        text-align: left;
+        padding-left: 10px;
+        /* height: 50px; */
+        line-height: 50px;
+        /* width: 550px; */
+        cursor: pointer;
+    }
+
+    .titleDiv, .authorDiv{
+        background-color: #d8d8d8;
+        color: black;
+        margin: 10px 0;
+        text-align: left;
+        padding-left: 10px;
+
+    }
+
+    .button{
+        background-color: black;
+        color: #d8d8d8;
+        height: 50px;
+        line-height: 50px;
+        /* width: 550px; */
+        border: none;
+        cursor:pointer;
+
+    }
+
+
+    .imgDiv{
+        background-color: #d8d8d8;
+        text-align: center;
+        color: #4a4a4a;
+        padding: 30px 0;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        /* width: 200px; */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+        box-shadow: 5px 10px 18px #888888;        
+    }
+    .bookImg{
+        width: 250px;
+        height: 330px;
+        border: 6px solid white;
+    }
+     .bookTitle,.bookAuthor,.bookDescription{
+        padding: 10px 20px;
+    }
+    .bookTitle{
+        color: white;
+        text-shadow: 2px 2px rgb(61, 56, 56);
+        font-size: 30px;
+        
+    }
+    .errorStatus{
+        font-size: 250px;
+        text-align: center;
+    }
+    .errorText {
+        font-size: 30px;
+        text-align: center;
+    }
+}
