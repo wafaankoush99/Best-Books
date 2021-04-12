@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Books List</title>
+      <link rel="stylesheet" href="../../../styles/base.css" type="text/css"><body>
+
+  </head>
+  <body>
+    <section class="container">
+    <header>
+      <h2>Best Books!</h2>
+    </header>
+    <main>
+      <div>
+        <h3 class="underHeader">Search Results</h3>
+      </div>
+      <div class="searchDiv">
+            <% books.forEach( (book) => { %>
+              <div class="imgDiv">
+                <img class="bookImg" src="<%= book.image %>" />
+                  <h2 class="bookTitle"><%= book.title %></h2>
+                  <h3 class="bookAuthor"><%= book.author %></h3>
+                  <p class="bookDescription"><%= book.description %></p>
+              </div>
+            <% }); %>
+      </div>
+    </main>
+    <footer></footer>
+  </section>
+
+  </body>
+</html>

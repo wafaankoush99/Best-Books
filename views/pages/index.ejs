@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Book App</title>
+  <link rel="stylesheet" type="css/text" href="style.css">
+  <link rel="stylesheet" href="../../../styles/base.css" type="text/css"><body>
+  </head>
+  <body>
+    <section class="container">
+  <header>
+    <h2>Best Books!</h2>
+  </header>
+  <main>
+    <div>
+      <h3 class="underHeader">Search by Title or Author</h3>
+    </div>
+    <div class="formDiv">
+      <form action="/searches" method="POST">
+        <input id="enter" type="text" placeholder="Enter a title or author" name="words" />
+        <br>
+        <!-- <label class="title">  <input class="rad" type="radio" name="searchBy" value="title">Title</label>
+        <label class="author">  <input class="rad" type="radio" name="searchBy" value="author">Author</label> -->
+        
+       <div class="titleDiv"> <input type="radio" id="title" name="title" value="title">
+        <label for="title">Title</label><br> </div>
+        <div class="authorDiv">
+        <input type="radio" id="author" name="author" value="author">
+        <label for="author">Author</label><br> </div>
+        <button class="button">Search the Google Books API</button>
+      </form>
+    </div>
+  </main>
+  <footer></footer>
+</section>
+</body>
+
+</html>
