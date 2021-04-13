@@ -30,22 +30,25 @@
       </header>
     <main>
       <div>
-        <h3 class="underHeader">Search Results</h3>
+        <h3 class="underHeader">Search by Title or Author</h3>
       </div>
-      <div class="searchDiv">
-            <% books.forEach( (book) => { %>
-              <div class="imgDiv">
-                <img class="bookImg" src="<%= book.image %>" />
-                  <h2 class="bookTitle"><%= book.title %></h2>
-                  <h3 class="bookAuthor"><%= book.author %></h3>
-                  <p class="bookDescription"><%= book.description %></p>
-              </div>
-            <% }); %>
+      <div class="formDiv">
+        <form action="/searches" method="POST">
+          <input id="enter" type="text" placeholder="Enter a title or author" name="search" />
+          <br>
+          <div class="titleDiv"> <input type="radio" id="title" name="intitle" value="intitle">
+            <label for="title">Title</label><br>
+          </div>
+          <div class="authorDiv">
+            <input type="radio" id="author" name="inauthor" value="inauthor">
+            <label for="author">Author</label><br>
+          </div>
+          <button class="button">Search the Google Books API</button>
+        </form>
       </div>
     </main>
     <footer></footer>
   </section>
-
-  </body>
-  <script src="../../../app.js"></script>
-  </html>
+</body>
+<script src="../../../app.js"></script>
+</html>
