@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Book App</title>
-  <link rel="stylesheet" type="css/text" href="style.css">
-  <link rel="stylesheet" href="../../../styles/base.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../../style/base.css" type="text/css">
+</head>
 
-<body>
-  </head>
+  <%- include('../layout/head') %>
 
   <body>
     <section class="container">
       <header>
-
         <div class="div2">
           <span style="cursor:pointer" onclick="openNav()">&#9776; </span>
 
@@ -29,35 +29,36 @@
         </div>
       </header>
       <main>
-        <div>
-          <h3 class="underHeader"></h3>
-        </div>
-        <div class="formDiv">
-          <h1 class="welcome">Welcome</h1>
+        <div class="searchDiv">
+          <% book.forEach( (book)=> { %>
+            <div class="imgDiv">
+              <img class="bookImg" src="<%= book.img %>" />
+              <h2 class="bookTitle">
+                <%= book.title %>
+              </h2>
+              <h3 class="bookAuthor">
+                <%= book.author %>
+              </h3>
+              <p class="bookDescription">
+                <%= book.description %>
+              </p>
+              <form  action="/getOneBookDetails/<%= book.id %>" method="get">
 
-          <form action="/searches/new">
-            <button class="button"> Click to Start </button>
-          </form>
+                <input type="hidden" name="image" value="<%=book.img%>">
+                <input type="hidden" name="title" value="<%= book.title%>">
+                <input type="hidden" name="description" value="<%= book.description %>">
+                <input type="hidden" name="auther" value="<%= book.authors%>">
+                <input type="hidden" name="isbn" value="<%= book.isbn %>">
 
-        </div>
-        <section>
-          <!-- <% console.log(booksResults); %> -->
-          <div class="searchDiv">
-            <% booksResults.forEach( (book) => { %>
-              <div class="imgDiv">
-                <img class="bookImg" src="<%= book.image %>" />
-                  <h2 class="bookTitle"><%= book.title %></h2>
-                  <h3 class="bookAuthor"><%= book.author %></h3>
-
-                  <!-- <p class="bookDescription"><%= book.description %></p>
-                  <p class="isbn"> ISBN: <%= book.identifier %></p> -->
-              </div>
+                <input  class="button viewDetailsButon" type="submit" value="View Detials">
+              </form>
+            </div>
             <% }); %>
-      </div>
-        </section>
+        </div>
       </main>
-      <footer></footer>
+      <footer> All Rights Reversed &copy; 2021 </footer>
     </section>
+
   </body>
-<script src="../../../app.js"></script>
+  <script src="../../../app.js"></script>
 </html>

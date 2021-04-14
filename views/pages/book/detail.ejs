@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Book App</title>
+  <link rel="stylesheet" href="../../../style/base.css" type="text/css">
+
+</head>
+
+<body>
+  <section class="container">
+    <header>
+      <div class="div2">
+        <span style="cursor:pointer" onclick="openNav()">&#9776; </span>
+
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" style="margin-bottom: 20px;" onclick="closeNav()">X</a>
+          <a href="/">Home</a>
+          <a href="/searches/new">New</a>
+        </div>
+
+
+      </div>
+      <div class="div1">
+        <h2>Best Books!</h2>
+      </div>
+    </header>
+    <main>
+      <div>
+        <h3 class="underHeader">Book Details</h3>
+      </div>
+      <div>
+
+        <div>
+
+          <div class="searchDiv">
+            <div class="imgDiv">
+              <img class="bookImg" src="<%= books.img %>" />
+              <h2 class="bookTitle">
+                <%= books.title%>
+              </h2>
+              <h3 class="bookAuthor">
+                <%= books.author%>
+              </h3>
+              <p class="bookDescription">
+                <%= books.description %>
+              </p>
+              <p class="isbn">
+                <%= books.isbn %>
+              </p>
+              <form action="/deleteBook/<%=books.id%>?_method=delete" method="post">
+                <button class="D button">Delete Book</button>
+              </form>
+              <button class="D button" id='updateBtn'>Update</button>
+              <section id='updateForm'>
+                <br>
+                <br>
+                <br>
+                <form class="detailsForm" action="/updateBook/<%=books.id%>?_method=put" method="post">
+                  <p>Title</p>
+
+                  <input type="text" name="title" value=' <%= books.title  %> '>
+                  <p>Author</p>
+                  <input type="text" name="author" value="<%= books.author  %>">
+                  <p>ISBN</p>
+                  <input type="text" name="isbn" value="<%= books.isbn  %>">
+                  <p>Image URL</p>
+                  <input type="text" name="img" value="<%= books.img  %>">
+                  <p>Description</p>
+                  <textarea name="description"><%= books.description  %></textarea>
+                  <br>
+                  <br>
+                  <br>
+                  <button class="button upButton" type="submit">Update Book</button>
+                </form>
+              </section>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+    </main>
+    <footer> All Rights Reversed &copy; 2021 </footer>
+
+    <section>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../../app.js"></script>
+
+</html>

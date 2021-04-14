@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Book App</title>
+  <link rel="stylesheet" href="../../../style/base.css" type="text/css">
+
+</head>
+
+<body>
+  <section class="container">
+    <header>
+
+      <div class="div2">
+        <span style="cursor:pointer" onclick="openNav()">&#9776; </span>
+
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" style="margin-bottom: 20px;" onclick="closeNav()">X</a>
+          <a href="/">Home</a>
+          <a href="/searches/new">New</a>
+        </div>
+
+
+      </div>
+      <div class="div1">
+        <h2>Best Books!</h2>
+      </div>
+    </header>
+    <main>
+      <div>
+        <h3 class="underHeader">Search Results</h3>
+      </div>
+      <div class="searchDiv">
+        <% books.forEach( (book)=> { %>
+          <div class="imgDiv">
+            <img class="bookImg" src="<%= book.img %>" />
+            <h2 class="bookTitle">
+              <%= book.title %>
+            </h2>
+            <h3 class="bookAuthor">
+              <%= book.author %>
+            </h3>
+            <p class="bookDescription">
+              <%= book.description %>
+            </p>
+            <p class="isbn"> ISBN: <%= book.isbn %>
+            </p>
+
+            <form action='/addBookHandler' method="POST">
+              <input type="hidden" name="title" value="<%= book.title %>">
+              <input type="hidden" name="author" value="<%= book.author %>">
+
+              <input class="descriptionShow" type="hidden" name="description" value="<%= book.description %>">
+              <br>
+
+              <input type="hidden" name="img" value="<%= book.img %>">
+              <br>
+
+              <input type="hidden" name="isbn" value="<%= book.isbn %>">
+
+              <button  class="button selectButton" type="submit">Select This Book</button>
+
+            </form>
+          </div>
+          <% }); %>
+      </div>
+    </main>
+    <footer> All Rights Reversed &copy; 2021 </footer>
+  </section>
+
+</body>
+
+<script src="../../../app.js"></script>
+
+</html>

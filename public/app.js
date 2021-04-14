@@ -5,3 +5,9 @@ function openNav() {
 function closeNav() {
     document.getElementById('mySidenav').style.width = '0';
 }
+
+$('#updateForm').hide();
+$('#updateBtn').on('click', function () {
+    $('#updateForm').toggle();
+});
+

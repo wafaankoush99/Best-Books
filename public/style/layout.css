@@ -35,6 +35,9 @@ h2 {
     footer{
         background-color: black;
         height: 60px;
+        clear: both;
+        line-height: 60px;
+        text-align: center;
     }
 
 
