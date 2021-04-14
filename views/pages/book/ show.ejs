@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Book App</title>
+        <link rel="stylesheet" href="../../../style/base.css" type="text/css">
+
+      </head>
+
+
+<body>
+  <section class="container">
+
+  <header>
+    <div class="div2">
+      <span style="cursor:pointer" onclick="openNav()">&#9776; </span>
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" style="margin-bottom: 20px;" onclick="closeNav()">X</a>
+        <a href="/">Home</a>
+        <a href="/searches/new" >New</a>
+      </div>
+
+
+    </div>
+    <div class="div1">
+      <h2>Best Books!</h2>
+    </div>
+  </header>
+
+
+    <main>
+
+        <%- include('./detail') %>
+
+    </main>
+
+    <footer> All Rights Reversed &copy; 2021 </footer>
+    <section>
+    </body>
+    <script src="../../../app.js"></script>
+
+    </html>

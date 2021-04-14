@@ -1,13 +1,6 @@
 @media (min-width: 480px) { 
 
 
-    .welcome{
-        text-align: center;
-        font-size: 100px;
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
     .button a {
         color: #d8d8d8;
         text-decoration: none;
@@ -23,7 +16,7 @@
     }
     .container {
         display: grid;
-        grid-template-rows: 80px minmax(calc(105vh - 170px) , 1fr) 60px;
+        grid-template-rows: 80px minmax(calc(250vh - 170px) , 1fr) 60px;
         /* gap: 10px; */
     }
 
@@ -79,7 +72,7 @@
         /* width: 550px; */
         border: none;
         cursor:pointer;
-        border-radius: 2%;
+        border-radius: 5%;
 
     }
 
@@ -96,7 +89,9 @@
         margin-left: auto;
         margin-right: auto;
         width: 500px;
-        box-shadow: 5px 10px 18px #888888;        
+        height: 700px;
+        box-shadow: 5px 10px 18px #888888;     
+        clear: both;   
     }
     .bookImg{
         width: 250px;
@@ -109,7 +104,7 @@
     .bookTitle{
         color: white;
         text-shadow: 2px 2px rgb(61, 56, 56);
-        font-size: 30px;
+        font-size: 20px;
         
     }
     .errorStatus{
@@ -186,5 +181,54 @@
         font-size: 18px;
       }
 
+      .D ,.U{
+        float: left;
+        width: 180px;
+        margin-left: 10%;
 
+
+      }
+
+      .detailsForm{
+        background-color: #d8d8d8;
+        text-align: left;
+        height: 750px;
+        
+      }
+
+      .detailsForm input{
+        padding: 20px;
+        margin: 20px 0 20px 20px;
+        width: 400px;
+      }
+      .detailsForm p {
+        padding-left: 30px;
+      }
+
+      textarea {
+        height: 90px;
+        width: 400px;
+        margin: 20px 0 20px 20px;
+        padding: 20px;
+      }
+
+      .upButton{
+        float: right;
+        width: 180px ;
+        margin-right: 40px;
+      }
+
+      .bookDescription{
+
+        overflow-y: scroll;
+        height: 60px;
+      }
+      .selectButton {
+        height: 50px;
+        width: 200px;
+      }
+      .viewDetailsButon{
+        height: 50px;
+        width: 200px;
+      }
 }
