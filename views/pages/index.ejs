@@ -40,6 +40,21 @@
           </form>
 
         </div>
+        <section>
+          <!-- <% console.log(booksResults); %> -->
+          <div class="searchDiv">
+            <% booksResults.forEach( (book) => { %>
+              <div class="imgDiv">
+                <img class="bookImg" src="<%= book.image %>" />
+                  <h2 class="bookTitle"><%= book.title %></h2>
+                  <h3 class="bookAuthor"><%= book.author %></h3>
+
+                  <!-- <p class="bookDescription"><%= book.description %></p>
+                  <p class="isbn"> ISBN: <%= book.identifier %></p> -->
+              </div>
+            <% }); %>
+      </div>
+        </section>
       </main>
       <footer></footer>
     </section>
