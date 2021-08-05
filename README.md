@@ -4,11 +4,11 @@
 Author: Wafa'a Ankoush
 Collaborations: [Marwan Reyad](https://github.com/MarwanReyadAL-Khawaldeh)
 
-1. ` git clone "repo link"
+1. ` git clone "repo link"`
 2. `npm i`
-3. code . // comment lines (18,19,20,21) 
-4. pgstrart
-5. nodemon
+3. `code . // comment lines (18,19,20,21) `
+4. `pgstrart`
+5. `nodemon`
 
 ![home](https://user-images.githubusercontent.com/78326110/128366492-23521f4d-590b-4969-b34e-d3d7de616894.png)
 
