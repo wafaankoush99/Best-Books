@@ -6,7 +6,7 @@ Collaborations: [Marwan Reyad](https://github.com/MarwanReyadAL-Khawaldeh)
 
 1. ` git clone "repo link"`
 2. `npm i`
-3. `code . // comment lines (18,19,20,21) `
+3. `code . ` // comment lines (18,19,20,21) 
 4. `pgstrart`
 5. `nodemon`
 
